@@ -52,11 +52,25 @@
   </footer>
 
   <script>
-    const btn = document.getElementById('nightToggle');
-    btn.addEventListener('click', () => {
-      document.body.classList.toggle('night-mode');
-    });
-  </script>
+const btn = document.getElementById('nightToggle');
+const currentTheme = localStorage.getItem('theme');
+
+// Se c'è tema salvato, applicalo
+if (currentTheme === 'night') {
+  document.body.classList.add('night-mode');
+}
+
+btn.addEventListener('click', () => {
+  document.body.classList.toggle('night-mode');
+
+  // Salva la scelta
+  if (document.body.classList.contains('night-mode')) {
+    localStorage.setItem('theme', 'night');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
+});
+</script>
 
 </body>
 </html>
