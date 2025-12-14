@@ -93,8 +93,8 @@ footer {
   transition: color 0.3s;
 }
 
-/* NIGHT MODE VARIABLES */
-body.night-mode {
+/* NIGHT MODE - usa CSS variables */
+html[data-theme="night"] {
   --bg-color: #121212;
   --text-color: #e0e0e0;
   --accent-color: #3399ff;
@@ -112,17 +112,18 @@ body.night-mode {
   cursor: pointer;
   font-weight: bold;
   z-index: 1000;
+  font-size: 1.2rem;
   transition: background-color 0.3s, color 0.3s;
 }
 
 /* Light mode: pulsante nero testo bianco */
-body:not(.night-mode) #nightToggle {
+html[data-theme="light"] #nightToggle {
   background-color: #000;
   color: #fff;
 }
 
 /* Dark mode: pulsante bianco testo nero */
-body.night-mode #nightToggle {
+html[data-theme="night"] #nightToggle {
   background-color: #fff;
   color: #000;
 }
