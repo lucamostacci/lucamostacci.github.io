@@ -22,6 +22,9 @@
       <a href="#" target="_blank">Video Demo</a>
       <a href="#" target="_blank">CV</a>
     </div>
+
+    <!-- Night Mode Button -->
+    <button id="nightToggle">🌙 Night Mode</button>
   </header>
 
   <!-- SKILLS -->
@@ -96,6 +99,14 @@
   <footer>
     <p>© 2025 Luca Mostacci</p>
   </footer>
+
+  <!-- JS Night Mode -->
+  <script>
+    const btn = document.getElementById('nightToggle');
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('night-mode');
+    });
+  </script>
 
 </body>
 </html>
