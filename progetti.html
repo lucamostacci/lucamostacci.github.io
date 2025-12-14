@@ -4,21 +4,28 @@
   <meta charset="UTF-8">
   <title>Progetti | Luca Mostacci</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Applica tema prima del render -->
+  <script>
+    const theme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+  </script>
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Theme Button -->
-  <button id="nightToggle">Theme</button>
+  <!-- Theme Button con emoji -->
+  <button id="nightToggle">
+    <span id="themeIcon"></span>
+  </button>
 
-  <!-- HERO (stesso della homepage) -->
+  <!-- HERO -->
   <header class="hero">
     <h1>Luca Mostacci</h1>
     <h2>Unity Developer / Interactive Designer</h2>
-    <p>
-      Qui puoi vedere i miei progetti e piccole applicazioni personali.
-    </p>
+    <p>Qui puoi vedere i miei progetti e piccole applicazioni personali.</p>
 
     <div class="links">
       <a href="index.html">Home</a>
@@ -29,7 +36,6 @@
   <!-- PROGETTI -->
   <section>
     <h3>Progetti</h3>
-
     <div class="grid">
       <div class="project">
         <img src="assets/images/progetto1.png" alt="Progetto 1">
@@ -42,8 +48,6 @@
         <h4>Progetto 2</h4>
         <p>Breve descrizione del progetto o prototipo realizzato.</p>
       </div>
-
-      <!-- Aggiungi altre card qui -->
     </div>
   </section>
 
@@ -51,26 +55,26 @@
     <p>© 2025 Luca Mostacci</p>
   </footer>
 
+  <!-- JS Theme Button -->
   <script>
-const btn = document.getElementById('nightToggle');
-const currentTheme = localStorage.getItem('theme');
+    const btn = document.getElementById('nightToggle');
+    const icon = document.getElementById('themeIcon');
 
-// Se c'è tema salvato, applicalo
-if (currentTheme === 'night') {
-  document.body.classList.add('night-mode');
-}
+    function updateIcon() {
+      const theme = document.documentElement.getAttribute('data-theme');
+      icon.textContent = theme === 'light' ? '🌙' : '☀️';
+    }
 
-btn.addEventListener('click', () => {
-  document.body.classList.toggle('night-mode');
+    updateIcon();
 
-  // Salva la scelta
-  if (document.body.classList.contains('night-mode')) {
-    localStorage.setItem('theme', 'night');
-  } else {
-    localStorage.setItem('theme', 'light');
-  }
-});
-</script>
+    btn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const newTheme = current === 'light' ? 'night' : 'light';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateIcon();
+    });
+  </script>
 
 </body>
 </html>
