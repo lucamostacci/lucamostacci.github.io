@@ -1,25 +1,27 @@
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   max-width: 1000px;
-  margin: 60px auto;
+  margin: 0 auto;
   padding: 0 20px;
   color: #222;
+  background-color: #f9f9f9;
   line-height: 1.6;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 0.2em;
+  text-align: center;
 }
 
 h2 {
-  font-size: 1.3rem;
-  font-weight: normal;
+  font-size: 1.5rem;
+  font-weight: 400;
   color: #555;
+  text-align: center;
+  margin-bottom: 1em;
 }
 
 h3 {
@@ -29,17 +31,27 @@ h3 {
 }
 
 .hero {
-  margin-bottom: 60px;
+  padding: 80px 20px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  margin-bottom: 40px;
 }
 
 .links a {
-  margin-right: 15px;
+  display: inline-block;
+  margin: 10px 15px;
+  padding: 8px 18px;
   text-decoration: none;
-  color: #0066cc;
+  color: #fff;
+  background-color: #0066cc;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
 .links a:hover {
-  text-decoration: underline;
+  background-color: #004999;
 }
 
 .grid {
@@ -49,11 +61,22 @@ h3 {
 }
 
 .project {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   margin-top: 30px;
+  transition: transform 0.2s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
 }
 
 footer {
   margin-top: 80px;
   font-size: 0.9rem;
   color: #777;
+  text-align: center;
+  padding: 20px 0;
 }
