@@ -150,3 +150,35 @@ html[data-theme="night"] #nightToggle {
   h2 { font-size: 1.2rem; }
   .hero { padding: 40px 10px; }
 }
+
+/* GRIGLIA ICONICA PROGETTI 64x64 */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* distanza tra icone */
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.project {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s, background-color 0.3s;
+  cursor: pointer;
+}
+
+.project:hover {
+  transform: scale(1.1); /* leggero zoom */
+}
+
+.project img {
+  width: 64px;
+  height: 64px;
+  display: block;
+}
