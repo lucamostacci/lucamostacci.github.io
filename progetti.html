@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Progetti | Luca Mostacci</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Theme Button -->
+  <button id="nightToggle">Theme</button>
+
+  <!-- HERO (stesso della homepage) -->
+  <header class="hero">
+    <h1>Luca Mostacci</h1>
+    <h2>Unity Developer / Interactive Designer</h2>
+    <p>
+      Qui puoi vedere i miei progetti e piccole applicazioni personali.
+    </p>
+
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="#" target="_blank">CV</a>
+    </div>
+  </header>
+
+  <!-- PROGETTI -->
+  <section>
+    <h3>Progetti</h3>
+
+    <div class="grid">
+      <div class="project">
+        <img src="assets/images/progetto1.png" alt="Progetto 1">
+        <h4>Progetto 1</h4>
+        <p>Breve descrizione del progetto o prototipo realizzato.</p>
+      </div>
+
+      <div class="project">
+        <img src="assets/images/progetto2.png" alt="Progetto 2">
+        <h4>Progetto 2</h4>
+        <p>Breve descrizione del progetto o prototipo realizzato.</p>
+      </div>
+
+      <!-- Aggiungi altre card qui -->
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Luca Mostacci</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('nightToggle');
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('night-mode');
+    });
+  </script>
+
+</body>
+</html>
