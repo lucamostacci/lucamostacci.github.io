@@ -84,6 +84,17 @@ h3 {
   transform: translateY(-5px);
 }
 
+.project img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.project img:hover {
+  transform: scale(1.03);
+}
+
 footer {
   margin-top: 80px;
   font-size: 0.9rem;
@@ -113,7 +124,12 @@ html[data-theme="night"] {
   font-weight: bold;
   z-index: 1000;
   font-size: 1.2rem;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s, opacity 0.2s;
+}
+
+/* Hover leggero pulsante */
+#nightToggle:hover {
+  opacity: 0.8;
 }
 
 /* Light mode: pulsante nero testo bianco */
@@ -126,4 +142,11 @@ html[data-theme="light"] #nightToggle {
 html[data-theme="night"] #nightToggle {
   background-color: #fff;
   color: #000;
+}
+
+/* Responsive testi */
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.2rem; }
+  .hero { padding: 40px 10px; }
 }
