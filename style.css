@@ -182,3 +182,16 @@ html[data-theme="night"] #nightToggle {
   height: 128px;
   display: block;
 }
+
+.video-container {
+  margin-top: 40px;
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  display: block;
+  margin: 0 auto;
+}

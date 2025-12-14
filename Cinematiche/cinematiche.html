@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Luca Mostacci | Unity Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Applica tema prima del render per evitare flash -->
+  <script>
+    const theme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+  </script>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <!-- Theme Button con emoji -->
+  <button id="nightToggle"><span id="themeIcon"></span></button>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Luca Mostacci</h1>
+    <h2>Unity Developer / Interactive Designer</h2>
+    <p>Sviluppo cinematiche.</p>
+
+    <div class="links">
+      <a href="../index.html">Home</a>
+      <a href="../progetti.html">Progetti</a>
+      <a href="../assets/cv/Luca Mostacci_CV.pdf" target="_blank">CV</a>
+    </div>
+  </header>
+
+  <section>
+  <h3><b>Video presentazione nuova catena di cafè</b></h3>
+  <p>
+    <div class="video-container">
+  <video controls preload="metadata">
+    <source src="videos/cinematic1.mp4" type="video/mp4">
+  </video>
+</div>
+  </p>
+  </section>
+
+    <section>
+  <h3><b>Simulazione ambiente</b></h3>
+  <p>
+    <div class="video-container">
+  <video controls preload="metadata">
+    <source src="videos/cinematic2.mp4" type="video/mp4">
+  </video>
+</div>
+  </p>
+  </section>
+
+  <section>
+  <h3>Tecnologie</h3>
+  <ul>
+    <li>Unity</li>
+    <li>Cinemachine</li>
+    <li>C#</li>
+  </ul>
+</section>
+
+  <footer>
+    <p>© 2025 Luca Mostacci</p>
+  </footer>
+
+  <!-- JS Theme Button -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById('nightToggle');
+      const icon = document.getElementById('themeIcon');
+
+      // Applica tema iniziale dal localStorage
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+
+      // Aggiorna emoji
+      function updateIcon() {
+        const theme = document.documentElement.getAttribute('data-theme');
+        icon.textContent = theme === 'light' ? '🌙' : '☀️';
+      }
+
+      updateIcon();
+
+      // Cambia tema al click
+      btn.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme');
+        const newTheme = current === 'light' ? 'night' : 'light';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateIcon();
+      });
+    });
+  </script>
+
+</body>
+</html>
