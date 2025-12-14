@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+  color: #222;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.2em;
+}
+
+h2 {
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: #555;
+}
+
+h3 {
+  margin-top: 60px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 6px;
+}
+
+.hero {
+  margin-bottom: 60px;
+}
+
+.links a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #0066cc;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.project {
+  margin-top: 30px;
+}
+
+footer {
+  margin-top: 80px;
+  font-size: 0.9rem;
+  color: #777;
+}
