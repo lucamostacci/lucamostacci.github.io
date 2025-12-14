@@ -50,21 +50,6 @@ h3 {
   transition: background-color 0.3s;
 }
 
-#nightToggle {
-  margin-top: 20px;
-  padding: 8px 18px;
-  border: none;
-  border-radius: 6px;
-  background-color: var(--accent-color);
-  color: #fff;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#nightToggle:hover {
-  background-color: #004999;
-}
-
 .links a {
   display: inline-block;
   margin: 10px 15px;
@@ -108,10 +93,36 @@ footer {
   transition: color 0.3s;
 }
 
-/* NIGHT MODE */
+/* NIGHT MODE VARIABLES */
 body.night-mode {
   --bg-color: #121212;
   --text-color: #e0e0e0;
   --accent-color: #3399ff;
   --card-bg: #1e1e1e;
+}
+
+/* THEME BUTTON */
+#nightToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 1000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light mode: pulsante nero testo bianco */
+body:not(.night-mode) #nightToggle {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Dark mode: pulsante bianco testo nero */
+body.night-mode #nightToggle {
+  background-color: #fff;
+  color: #000;
 }
